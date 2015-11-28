@@ -15,7 +15,7 @@
                    :direction :output
                    :element-type 'unsigned-byte
                    :if-exists :supersede)
-  (do* ((i 0 (+ i 1)) (c (nth i *monkey*) (nth i *monkey*))) 
+  (do* ((i 0 (+ i 1)) (c (first *monkey*) (nth i *monkey*))) 
        ((>= i (length *monkey*)) "done")
     (write-byte c b)))
 
